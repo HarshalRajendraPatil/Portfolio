@@ -1,13 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta Data -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- linking the favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+    <!-- linking the external style sheet -->
     <link rel="stylesheet" href="style/style.css" />
-    <title></title>
+
+    <!-- linking the font awesome toolkit -->
+    <script
+      src="https://kit.fontawesome.com/fdf50e8961.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- title -->
+    <title>Portfolio Website</title>
   </head>
   <body>
+    <div class="contianer">
+      <!-- Navigation section -->
+      <nav class="navigation">
+        <div class="logo"><span class="logo-text">HRP</span></div>
+
+        <ul class="nav-links">
+          <li class="link home-link">
+            <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+          </li>
+
+          <li class="link about-link">
+            <a href="#"><i class="fa-solid fa-user"></i> About</a>
+          </li>
+
+          <li class="link service-link">
+            <a href="#"><i class="fa-solid fa-list"></i> Services</a>
+          </li>
+
+          <li class="link portfolio-link">
+            <a href="#"><i class="fa-solid fa-toolbox"></i> Portfolio</a>
+          </li>
+
+          <li class="link contact-link">
+            <a href="#"><i class="fa-solid fa-comments"></i> Contact</a>
+          </li>
+        </ul>
+
+        <div class="social-media">
+          <a href="#" class="sm-links"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="sm-links"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="sm-links"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </nav>
+
+      <!-- Home section -->
+      <section class="home hide" id="home">
+        <div class="text">
+          <h1 class="heading-primary">
+            Hello, my name is <span>Harshal Patil</span>
+          </h1>
+          <h2 class="heading-secondary">
+            I am <span class="auto-input"></span>
+          </h2>
+          <p class="short-intro">
+            I'm a web developer with an extensive experience of 1.5 years. My
+            expertise it to create and design custom, cool looking and
+            responsive websites and many more...
+          </p>
+
+          <a href="#" class="cta">More about me</a>
+        </div>
+        <div class="self-img">
+          <img src="img/bg-img.png" alt="owner image" class="img" srcset="" />
+        </div>
+      </section>
+      <section class="about">about</section>
+      <section class="services">services</section>
+      <section class="portfolio">Portfolio</section>
+
+      <!-- contact section -->
+      <section class="contact hide">
+        <div class="title">Contact Me</div>
+        <div class="mt-1"></div>
+        <div class="mt-2"></div>
+        <div class="contact-rest">
+          <h1 class="heading-primary">You have any question ?</h1>
+          <h3 class="heading-tertiary space-md">I AM AT YOUR SERVICE</h3>
+          <div class="contact-details">
+            <div class="contact-detail-box">
+              <div class="contact-detail-box-logo">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="contact-detail-box-info">Call Us On</div>
+              <div class="contact-detail-box-ans">+91 9130548562</div>
+            </div>
+
+            <div class="contact-detail-box">
+              <div class="contact-detail-box-logo">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="contact-detail-box-info">Office</div>
+              <div class="contact-detail-box-ans">
+                Garkheda Parisar, Aurangabad
+              </div>
+            </div>
+
+            <div class="contact-detail-box">
+              <div class="contact-detail-box-logo">
+                <i class="fa-solid fa-earth-americas"></i>
+              </div>
+              <div class="contact-detail-box-info">Website</div>
+              <div class="contact-detail-box-ans">
+                Lorem ipsum dolor sit amet
+              </div>
+            </div>
+          </div>
+
+          <h1 class="heading-primary">SEND AN EMAIL</h1>
+          <h3 class="heading-tertiary space-md">
+            I AM VERY RESPONSIVE TO MESSAGES
+          </h3>
+
+          <form action="" method="post" class="contact-form"></form>
+          <input
+            type="text"
+            placeholder="Name"
+            autocomplete="off"
+            required
+            name="name"
+            class="contact-form-name sm-margin"
+          />
+
+          <input
+            type="email"
+            placeholder="Email"
+            autocomplete="off"
+            required
+            name="email"
+            class="contact-form-name"
+          />
+
+          <input
+            type="text"
+            placeholder="Subject"
+            autocomplete="off"
+            required
+            name="subject"
+            class="contact-form-subject"
+          />
+
+          <textarea
+            name="message"
+            id=""
+            cols="10"
+            rows="10"
+            placeholder="Subject"
+            autocomplete="off"
+            required
+            class="contact-form-message"
+          ></textarea>
+
+          <button type="submit" class="btn">Send Message</button>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script/script.js"></script>
   </body>
 </html>
