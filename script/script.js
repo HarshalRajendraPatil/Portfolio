@@ -8,6 +8,9 @@ const aboutLink = document.querySelector(".about-link");
 const serviceLink = document.querySelector(".service-link");
 const portfolioLink = document.querySelector(".portfolio-link");
 const contactLink = document.querySelector(".contact-link");
+const hamburger = document.querySelector(".hamburger");
+const nav = document.querySelector(".navigation");
+const more = document.querySelector(".more");
 
 const showScreen = function (window) {
   home.classList.add("hide");
@@ -18,6 +21,29 @@ const showScreen = function (window) {
 
   window.classList.remove("hide");
 };
+
+if (screen.width <= 700) {
+  homeLink.addEventListener("click", function () {
+    showScreen(home);
+    nav.classList.add("hide");
+  });
+  aboutLink.addEventListener("click", function () {
+    showScreen(about);
+    nav.classList.add("hide");
+  });
+  contactLink.addEventListener("click", function () {
+    showScreen(contact);
+    nav.classList.add("hide");
+  });
+  serviceLink.addEventListener("click", function () {
+    showScreen(service);
+    nav.classList.add("hide");
+  });
+  portfolioLink.addEventListener("click", function () {
+    showScreen(portfolio);
+    nav.classList.add("hide");
+  });
+}
 
 homeLink.addEventListener("click", function () {
   showScreen(home);
@@ -33,6 +59,14 @@ portfolioLink.addEventListener("click", function () {
 });
 contactLink.addEventListener("click", function () {
   showScreen(contact);
+});
+
+hamburger.addEventListener("click", function () {
+  nav.classList.toggle("hide");
+});
+
+more.addEventListener("click", function () {
+  showScreen(about);
 });
 
 var typed = new Typed(".auto-input", {

@@ -75,6 +75,38 @@ html {
 
 .contianer {
   display: flex;
+  position: relative;
+}
+
+/* Styling for hamburger */
+.hamburger {
+  padding: 1.7rem 0 0 0;
+  display: none;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(35, 35, 35);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.ham-lines {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.l1,
+.l2,
+.l3 {
+  width: 3rem;
+  border: 1px solid rgb(255, 100, 0);
+  margin-bottom: 5px;
+}
+
+.l3 {
+  margin-bottom: 0;
 }
 
 /* Styling for navigation section */
@@ -154,6 +186,12 @@ html {
   width: 75%;
   background-color: rgb(20, 20, 20);
   display: flex;
+  align-items: center;
+}
+
+.home-box {
+  margin-top: 10rem;
+  display: flex;
   justify-content: center;
   align-items: center;
   line-height: 1.5;
@@ -162,7 +200,7 @@ html {
 
 .text {
   max-width: 65%;
-  padding: 1.5rem 2rem;
+  padding: 1rem;
 }
 
 .text h1 span,
@@ -417,13 +455,18 @@ html {
   margin-top: 5rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   gap: 3rem;
 }
 
 .portfolio-projects-img {
   width: 35%;
+  transition: all 0.3s;
+}
+
+.portfolio-projects-img:hover {
+  transform: scale(1.1);
 }
 
 .project-img {
@@ -527,4 +570,123 @@ html {
 .hide {
   display: none;
   transition: all 0.5s;
+}
+
+@media all and (max-width: 1350px) {
+  .contact-form-name {
+    width: 100%;
+  }
+  .portfolio-projects-img {
+    width: 45%;
+  }
+}
+
+@media all and (max-width: 1175px) {
+  .service-details {
+    justify-content: space-evenly;
+  }
+  .service-container {
+    max-width: 45%;
+  }
+}
+
+@media all and (max-width: 950px) {
+  html {
+    font-size: 50%;
+  }
+  .portfolio-projects {
+    flex-direction: column;
+  }
+  .portfolio-projects-img {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .contianer {
+    display: block;
+  }
+  .navigation {
+    width: 100%;
+  }
+  .nav-links,
+  .social-media {
+    font-size: 3rem;
+  }
+  .hamburger {
+    display: block;
+    top: 3rem;
+    right: 3rem;
+    z-index: 200;
+  }
+  .home,
+  .about,
+  .service,
+  .portfolio,
+  .contact {
+    width: 100%;
+    padding-top: 5rem;
+  }
+  .home-box {
+    flex-direction: column;
+  }
+  .text {
+    padding: 3rem;
+    max-width: 100%;
+  }
+  .self-img {
+    width: 50%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  html {
+    font-size: 45%;
+  }
+  .hamburger {
+    padding: 2rem 0 0 0;
+  }
+  .service-details {
+    flex-direction: column;
+  }
+  .service-container {
+    max-width: 100%;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .about-edu {
+    flex-direction: column;
+  }
+  .education {
+    max-width: 100%;
+  }
+  .experience {
+    width: 100%;
+  }
+  .about-languages {
+    flex-direction: column;
+  }
+  .about-languages-box {
+    width: 100%;
+  }
+  .about-me {
+    flex-direction: column;
+  }
+  .about-me-1,
+  .about-me-2 {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 350px) {
+  html {
+    font-size: 40%;
+  }
+  .hamburger {
+    padding: 2.3rem 0 0 0;
+  }
+  .self-img {
+    width: 70%;
+  }
 }
