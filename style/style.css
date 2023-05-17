@@ -636,6 +636,16 @@ html {
   }
   .self-img {
     width: 50%;
+    padding-bottom: 4rem;
+  }
+  .about-details {
+    line-height: 1.5;
+  }
+  .service-container-details {
+    line-height: 1.5;
+  }
+  .portfolio-projects {
+    gap: 5rem;
   }
 }
 

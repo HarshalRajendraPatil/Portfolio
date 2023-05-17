@@ -11,6 +11,7 @@ const contactLink = document.querySelector(".contact-link");
 const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector(".navigation");
 const more = document.querySelector(".more");
+const btn = document.querySelector(".btn");
 
 const showScreen = function (window) {
   home.classList.add("hide");
