@@ -33,6 +33,17 @@ const Projects = () => {
     },
     {
       id: 3,
+      title: "REST API Bank Management System",
+      description: "A robust REST API bank management system built with Node.js and Express, featuring authentication, data validation, and comprehensive documentation.",
+      image: "bank.jpeg",
+      category: "backend",
+      technologies: ["Node.js", "Express", "MongoDB", "JWT", "Mongoose"],
+      liveUrl: "",
+      githubUrl: "https://github.com/HarshalRajendraPatil/Banking-API",
+      featured: false
+    },
+    {
+      id: 4,
       title: "ToonDig",
       description: "A website to stream cartoons and movies. It is a advanced website with a lot of features like login, signup, watch history, etc.",
       image: "toondig.jpg",
@@ -41,17 +52,6 @@ const Projects = () => {
       liveUrl: "https://toondig.netlify.app",
       githubUrl: "https://github.com/HarshalRajendraPatil/Toon-Dig-Project",
       featured: true
-    },
-    {
-      id: 4,
-      title: "REST API Bank Management System",
-      description: "A robust REST API bank management system built with Node.js and Express, featuring authentication, data validation, and comprehensive documentation.",
-      image: "bank.jpeg",
-      category: "backend",
-      technologies: ["Node.js", "Express", "MongoDB", "JWT", "Mongoose"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/HarshalRajendraPatil/Banking-API",
-      featured: false
     },
     {
       id: 5,
@@ -249,16 +249,18 @@ const Projects = () => {
 
                   {/* Project Links */}
                   <div className="project-links">
-                    <motion.a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link"
-                      whileHover={{ x: 5 }}
-                    >
-                      <Eye size={16} />
-                      Live Demo
-                    </motion.a>
+                    {project.liveUrl && (
+                      <motion.a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-link"
+                        whileHover={{ x: 5 }}
+                      >
+                        <Eye size={16} />
+                        Live Demo
+                      </motion.a>
+                    )}
                     <motion.a
                       href={project.githubUrl}
                       target="_blank"
